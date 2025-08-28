@@ -11,8 +11,7 @@ app.secret_key = 'secret_key'   #Needed for flashing messages
 
 # Dummy users 
 USERS = {
-    "usera": "pass123",
-    "userb": "pass456"
+
 }
 
 # Directories
