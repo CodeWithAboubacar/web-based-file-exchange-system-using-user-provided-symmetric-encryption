@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><title>Decryption Result</title></head>
+<body>
+  <h2>Decryption Successful!</h2>
+  <p><strong>Decrypted File:</strong> {{ filename }}</p>
+  {% if preview %}
+    <h3>CSV Preview:</h3>
+    {{ preview|safe }}
+  {% endif %}
+  <a href="/">Back</a>
+</body>
+</html>

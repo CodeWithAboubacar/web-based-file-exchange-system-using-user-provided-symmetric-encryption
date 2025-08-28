@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure File Exchange</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>🔐 Upload & Encrypt File to Shared Folder</h2> <p><a href="/logout">Logout</a></p>
+    
+    
+    <form action="/upload_to_shared" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Encrypt & Share</button>
+    </form>
+
+    <hr>
+
+    <h3>👀 Already Shared?</h3>
+    <a href="/shared">Go to Shared Files</a>
+
+    
+    <hr>
+
+    <form action="/reset" method="get" onsubmit="return confirm('Are you sure you want to delete all data?');">
+        <button style="color: red;" type="submit">🗑️ Clear All Data</button>
+    </form>
+</body>
+</html>
